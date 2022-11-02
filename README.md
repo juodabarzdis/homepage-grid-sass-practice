@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Netlify URL](https://6362491617094c74828aa87d--deluxe-puffpuff-31808d.netlify.app/))
+- Live Site URL: [Netlify URL](https://6362491617094c74828aa87d--deluxe-puffpuff-31808d.netlify.app/)
 
 ### Built with
 

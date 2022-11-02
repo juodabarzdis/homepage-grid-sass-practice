@@ -1,0 +1,41 @@
+.menu-btn {
+    width: 3.6rem;
+    height: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 3.6rem / 2);
+    right: 1rem;
+    display: none;
+    z-index: 100;
+
+    @media(max-width: 700px) {
+        display: flex;
+    }
+
+    &__line {
+        height: 0.25rem;
+        width: 3.6rem;
+        margin: 0.25rem 0;
+        background-color: $very-dark-blue;
+        transition: all 0.3s ease-in-out;
+
+        &--open {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(0.7rem, 0.7rem);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(0.7rem, -0.7rem);
+            }
+        }
+
+    }
+
+}

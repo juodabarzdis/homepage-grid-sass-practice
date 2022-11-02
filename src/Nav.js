@@ -1,10 +1,26 @@
-import React from "react";
+import { useState } from "react";
+import MenuBtn from "./components/MenuBtn";
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  if (menuOpen) {
+    document.body.classList.add("scroll-off");
+  } else {
+    document.body.classList.remove("scroll-off");
+  }
+
   return (
     <nav className="nav">
       <div className="nav__logo"></div>
-      <ul className="nav__list">
+      <div className="nav__menu" onClick={toggleMenu}>
+        <MenuBtn open={menuOpen} />
+      </div>
+      <ul className={menuOpen ? "nav__list nav__list--open" : "nav__list"}>
         <li className="nav__item">
           <a href="#" className="nav__link">
             Home

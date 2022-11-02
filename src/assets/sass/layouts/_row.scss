@@ -5,6 +5,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 6rem;
+    padding: 0 1rem;
+
+    @media(max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .list-row-item {
@@ -34,12 +39,15 @@
 
         &__heading {
             margin-bottom: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $soft-red;
+            }
         }
 
         &__paragraph {
-            font-size: $font-size-paragraph;
             color: $dark-grayish-blue;
-
         }
     }
 }
